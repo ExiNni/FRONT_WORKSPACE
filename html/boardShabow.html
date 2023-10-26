@@ -24,8 +24,41 @@
                 <form class = "post-form">
                     <input type = "text" placeholder="제목">
                     <textarea placeholder="내용 작성하기"></textarea>
-                    <button type = "submit">작성완료</button>
+                    <button type = "submit" id="post-button">작성완료</button>
+                    <button onclick="hihibutton()">안녕 버튼이야</button>
+
+                    
+                    <button onclick="joinButton()">회원가입 하기</button>
+                    <p id="joinCheck">회원가입을 하는 중입니다.</p>
+                    <!--class와 id의 차이점: id는 자바스크립트를 사용할 때 class는 디자인할때 사용-->
                 </form>
+                <script>
+                    function hihibutton(){
+                        alert("안녕 나는 버튼이라고해");
+                    }
+                    function joinButton(){
+                        var txt;
+                        if(confirm("버튼클릭!")){
+                            txt = "클릭완료~";
+                        } else{
+                            txt = "회원가입을 완료하지 못했습니다";
+                        }
+                        document.getElementById("joinCheck").innerHTML = txt;
+                    }
+                </script>
+
+                <script>
+                    document.addEventListener("DOMContentLoaded", function(){
+                        // 1. html 버튼 id 가져오기
+                        const postButton = document.getElementById("post-button");
+                        // 2. 버튼을 클릭할때 실행될 함수를 정의
+                        function buttonClick(){
+                            alert("게시물의 내용을 작성해주세요");
+                        }
+                        // 3. 버튼 클릭 시 실행될 함수 연결
+                        postButton.addEventListener("click", buttonClick);
+                    });
+                </script>
             </div>
         </div>
         <h2>새 게시글 작성</h2>
