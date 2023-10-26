@@ -18,7 +18,7 @@
             nav{
                 float: left;
                 width: 30%;
-                height: 300px;
+                height: 500px;
                 background: #f5a8ef;
                 padding: 20px;
             }
@@ -33,7 +33,7 @@
                 padding: 20px;
                 width: 70%;
                 background-color: #f1f1f1;
-                height: 300px;
+                height: 500px;
             }
 
             section::after{
@@ -43,7 +43,7 @@
             }
 
             footer{
-                background-color: #6b6b6b;
+                background:linear-gradient(#6b6b6b, red);
                 padding: 10px;
                 text-align: center;
                 color: white;
@@ -55,6 +55,34 @@
                     height: auto;
                 }
             }
+
+            .one{
+                background-color: gray;
+                margin-bottom: 30px;
+                text-align: center;
+
+            }
+
+            .two{
+                background-color: gray;
+                margin-bottom: 30px;
+                text-align: center;
+
+            }
+
+            .three{
+                background-color: gray;
+                margin-bottom: 30px;
+                text-align: center;
+
+            }
+
+            a{
+                text-decoration-line: none;
+                color:black
+                
+            }
+
         </style>
     </head>
     <body>
@@ -66,24 +94,49 @@
         <section>
             <nav>
                 <ul>
-                    <li>회사 소개</li>
-                    <li>제품 설명</li>
-                    <li>구매 하기</li>
+                    <li class="one"><a href="https://github.com/ExiNni/FRONT_WORKSPACE">회사 소개</a></li>
+                    <li class="two"><a href="https://github.com/khkyungnan">제품 설명</a></li>
+                    <li class="three"><a href="https://hianna.tistory.com/474"> 방문 하기</a></li>
                 </ul>
             </nav>
        
-         <article>
-            <h1>회사의 위대함</h1>
-            <p>우리 회사는 위대하고 위대한 회사이다.<br>
-            위대함이 하늘 부끄러움 없이 위대하다</p>
-            <input type = "text" placeholder="댓글 쓰기"> 
-            <input type= "button" placeholder="입력">
-         </article>
+            <article>
+                <h1>회사의 위대함</h1>
+                <p>우리 회사는 위대하고 위대한 회사이다.<br>
+                위대함이 하늘 부끄러움 없이 위대하다</p>
+                <input id="commentInput" placeholder="댓글 작성하기">
+                <button onclick="addComment()">작성완료</button>
+                <div id="comments">
+                
+            </article>
          </section>
 
          <footer>
-            <p>회사 소개 | 연혁 | 오시는길</p>
+            <p><a href="https://github.com/ExiNni/FRONT_WORKSPACE">회사 소개</a> | <a href="https://github.com/khkyungnan">연혁</a> | <a href="https://hianna.tistory.com/474">오시는길</a></p>
          </footer>
+
+            <script>
+                function addComment(){
+                    const commentInput = document.getElementById("commentInput");
+                    const commentText = commentInput.value;
+
+                    if(commentText.trim() ===""){
+                        alert("댓글을 작성해주세요");
+                        return;
+                    }
+
+                    const commentsBox = document.getElementById("comments");
+
+                    const commentDIV = document.createElement("div");
+
+                    commentDIV.className = "comment";
+                    commentDIV.textContent = commentText;
+
+                    commentsBox.appendChild(commentDIV);
+                    commentInput.value="";
+                }
+            </script>
+         
     </body>
 
 </html>
