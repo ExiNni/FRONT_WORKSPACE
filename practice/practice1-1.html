@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>연습1</title>
+
+        <style>
+            body{
+                background-color: blanchedalmond;
+                margin-left: 30px;
+                margin-right: 30px;
+            }
+
+            h3{
+                text-align: center;
+                color: aquamarine;
+            }
+
+            hr{
+                height: 5px;
+                background-color: gray;
+                
+            }
+
+            span{
+                color: red;
+                font-size: 30px;
+            }
+            .picture{
+                border-color: blue;
+                
+            }
+
+
+        </style>
+
+    </head>
+
+    <body>
+        <h3 onmouseover="show()" onmouseout="hide()">아이묭</h3>
+        
+        <hr>
+        <div><img id="fig" src=""></div>
+        저는 프로그래머이고 제일 좋아하는 과목은<br>
+        <span>자바입니다</span>. <br>
+        저는 풀스택 개발자가 되는것이 <span>꿈</span>입니다.<br>
+
+
+
+            <a href="https://www.naver.com/" id="picture"><img src="aimyon.jpg" width="100px" height="100px"></a><br><br>
+            <a href="https://www.naver.com/">네이버 바로가기</a>
+
+        
+
+        <script>
+            function show(){
+                document.getElementById("fig").src="aimyon.jpg";
+            }
+
+            function hide(){
+                document.getElementById("fig").src="";
+            }
+        </script>
+    </body>
+</html>

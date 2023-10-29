@@ -1,0 +1,62 @@
+<p></p> 글을 쓰고 아래 빈칸을 만들어줌
+<hr> 가로 선 만들어줌
+<br> 띄어쓰기, 빈칸 없음
+<strong> 강조, 화면 낭독기에서 강조해줌
+<b> 글씨만 두껍게 강조해줌
+<ol> 순서가 있는 목록 // <ol type="a"> default는 1,2,3,4.. 이지만 type을 써서 a,b,c,d... 로 만들 수 있음
+<ul> 순서가 있는 목록
+  <li> ol 이나 ul을 사용해서 목록을 만들고 li로 목록 작성
+
+<table>
+            <caption>테이블 제목</caption>
+            <tr> // 행 개수 만큼 만들기
+                <th>용도</th> // 1행 제목 강조됨
+                <td>선물용</td> // 표에 들어갈 품목
+                <td>선물용</td>
+                <td>가정용</td>
+                <td>가정용</td>
+            </tr>
+            <tr>
+                <th>중량</th>
+                <td>3kg</td>
+                <td>5kg</td>
+                <td>3kg</td>
+                <td>5kg</td>
+
+            </tr>
+            <tr>
+                <th>갯수</th>
+                <td>11~16</td>
+                <td>18~26</td>
+                <td>11~16</td>
+                <td>18~26</td>
+            </tr>
+            <tr>
+                <th>가격</th>
+                <td>35000원</td>
+                <td>52000원</td>
+                <td>30000원</td>
+                <td>47000원</td>
+            </tr>
+            <tr></tr>
+        </table>
+
+
+<img src = "이미지 파일 경로 혹은 주소">
+<img src = "이미지 파일 경로 혹은 주소" alt="화면 낭독기에서 읽어줄 설명">
+
+<audio src ="파일명" controls></audio> // controls 는 재생 막대를 표시 // 소리가 있는 것들은 자동 재생 되지 않음
+
+<p><a href="https://www.naver.com/">멀티미디어 삽입하기</a> </p> // 현재 페이지에서 링크 이동
+
+<p><a href="https://www.naver.com/" target="_blank">멀티미디어 삽입하기</a> </p> // 새로운 탭에서 링크 이동
+
+<label> 속성에선 for를 사용
+<input> 속성에서는 id 를 사용
+<label for="user_id">아이디: <input type="text" id="user_id"></label> <br> // label과 input이 같은 덩어리로 묶임
+<label for="user_password">비밀번호: <input type="password" id="user_password"></label>
+
+<input type="submit" value="로그인"> // submit 버튼 // 서버로 전송하는 역할 // value는 버튼의 이름을 바꿈
+
+
+
