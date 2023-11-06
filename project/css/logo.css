@@ -1,9 +1,10 @@
-h1 {
-    text-align: center;
-    background-color: black;
-    color: white;
-    padding: 150px;
-    
+.top10 {
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 75%;
+    height: 500px;
+    margin-bottom: 20px;
+
 }
 
 html {
@@ -237,8 +238,6 @@ img {
     height: 300px;
     border-radius: 10px;
 }
-
-
 
 
 
